@@ -134,6 +134,7 @@ RUN apt-get install -y \
 RUN wget --quiet https://github.com/ENCODE-DCC/kentUtils/archive/v302.0.0.tar.gz \
       && tar xf v302.0.0.tar.gz \
       && cd kentUtils-302.0.0 \
+      && export GIT_SSL_NO_VERIFY=1 \
       && make
 
 ##########
